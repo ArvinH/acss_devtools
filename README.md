@@ -2,6 +2,6 @@
 
 Chrome devtool extension for Atomic css
 
-Just for demo, lots of bugs will be fixed on next couple release. I promise.
+Turn your element style into Atomic css class automatically
 
 ![demo](devtools-acss-demo.gif)
