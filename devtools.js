@@ -29,7 +29,9 @@
           }
         });
 
-        return styleMap;
+        return {
+          acss: styleMap.join(' ').toString()
+        };
       }
 
 
