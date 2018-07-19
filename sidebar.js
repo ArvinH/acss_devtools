@@ -1,6 +1,5 @@
-(function () {
-
-    var page_generateAtomicClass = function (selectedElementCssText) {
+(() => {
+    const page_generateAtomicClass = (selectedElementCssText) => {
         const inlineStyleText = selectedElementCssText;
         const inlineStyleArray = inlineStyleText && inlineStyleText.split('; ') || [];
         const styleMap = [];
@@ -28,7 +27,7 @@
     }
 
 
-    var backgroundPageConnection = chrome.runtime.connect({
+    const backgroundPageConnection = chrome.runtime.connect({
         name: "panel"
     });
 
@@ -36,12 +35,9 @@
         name: 'init',
         tabId: chrome.devtools.inspectedWindow.tabId
     });
-    backgroundPageConnection.onMessage.addListener(function (message) {
+    backgroundPageConnection.onMessage.addListener((message) => {
         // Handle responses from the background page, if any
-
         const acssClass = page_generateAtomicClass(message.cssText);
-
-
         document.querySelector('#app').innerHTML = acssClass.acss;
     });
 
