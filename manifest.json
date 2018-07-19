@@ -9,7 +9,7 @@
     "https://*/*"
   ],
   "browser_action": {
-    "default_icon": "acss_devtools_small.png"
+    "default_icon": "acss_devtools.png"
   },
   "icons": {
     "16": "acss_devtools16x16.png",
