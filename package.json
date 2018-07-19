@@ -4,7 +4,8 @@
   "description": "devtool extension for making Acss users happier",
   "main": "",
   "scripts": {
-    "build": "gulp"
+    "build": "gulp build",
+    "pre-publish": "gulp prepublish"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
     "gulp": "^3.9.1",
     "gulp-babel-minify": "^0.4.3",
     "gulp-minify-css": "^1.2.4",
-    "gulp-uglify": "^3.0.0"
+    "gulp-uglify": "^3.0.0",
+    "gulp-zip": "^4.1.0"
   }
 }

@@ -1,6 +1,7 @@
 const gulp = require('gulp');
 const minifyCSS = require('gulp-minify-css');
 const minify = require('gulp-babel-minify');
+const zip = require('gulp-zip');
 
 gulp.task('minify-css', function () {
   return gulp.src('./css/style.css')
@@ -31,4 +32,10 @@ gulp.task('copyFiles', () => {
     .pipe(gulp.dest("./build/images/"))
 });
 
-gulp.task('default', ['minify-css', 'minify', 'copyFiles']);
+gulp.task('prepublish', () =>
+  gulp.src('build/**/*')
+  .pipe(zip('acss_devtools-prod.zip'))
+  .pipe(gulp.dest('dest'))
+);
+
+gulp.task('build', ['minify-css', 'minify', 'copyFiles']);
