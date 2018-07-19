@@ -1,6 +1,6 @@
 {
   "name": "Atomic CSS Devtool",
-  "version": "0.1",
+  "version": "1.0",
   "description": "devtool extension for making Acss users happier",
   "devtools_page": "devtools.html",
   "permissions": [
@@ -8,6 +8,8 @@
     "http://*/*",
     "https://*/*"
   ],
-  "manifest_version": 2,
-  "content_security_policy": "script-src 'self' 'unsafe-eval' https://cdnjs.cloudflare.com; object-src 'self'"
+  "browser_action": {
+    "default_icon": "acss_devtools_small.png"
+  },
+  "manifest_version": 2
 }
