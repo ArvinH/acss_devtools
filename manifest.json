@@ -1,6 +1,6 @@
 {
-  "name": "Atomic CSS Devtool",
-  "version": "1.1",
+  "name": "Atomic CSS Devtools",
+  "version": "1.2",
   "description": "devtool extension for making Acss users happier",
   "devtools_page": "devtools.html",
   "permissions": [
