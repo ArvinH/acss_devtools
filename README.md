@@ -7,3 +7,9 @@
 Turn your element style into Atomic css class automatically, be a happy atomizer!
 
 ![demo](./images/devtools-acss-demo.gif)
+
+## Develop
+
+* Update version in `manifest.json`
+* run `gulp`
+* Publish `build/`
