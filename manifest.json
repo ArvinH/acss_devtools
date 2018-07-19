@@ -3,7 +3,22 @@
   "version": "0.1",
   "description": "devtool extension for making Acss users happier",
   "devtools_page": "devtools.html",
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "all_frames": true,
+      "js": [
+        "contentScript.js"
+      ]
+    }
+  ],
   "permissions": [
+    "activeTab",
     "tabs",
     "http://*/*",
     "https://*/*"
