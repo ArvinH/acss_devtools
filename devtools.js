@@ -45,6 +45,9 @@
         chrome.devtools.inspectedWindow.eval(
           "window.$0.style.cssText",
           function (result, isException) {
+            if (!panelWindow) {
+              return;
+            }
             var status = panelWindow.document.querySelector("#app");
             const acssClass = page_generateAtomicClass(result);
             status.innerHTML = acssClass.acss;
