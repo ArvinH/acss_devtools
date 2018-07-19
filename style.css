@@ -1,0 +1,18 @@
+.ACSS-title {
+  margin: 20px;
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+.acssClass-result {
+  margin: 20px;
+  font-size: 14px;
+  margin-top: 0;
+  font-weight: bold;
+}
+
+.clipboard-btn {
+  margin: 20px;
+  margin-top: 0;
+}
