@@ -1,0 +1,33 @@
+{
+  "name": "acss_devtool",
+  "version": "1.3.0",
+  "description": "devtool extension for making Acss users happier",
+  "main": "",
+  "scripts": {
+    "build": "gulp build",
+    "pre-publish": "gulp prepublish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArvinH/acss_devtool.git"
+  },
+  "keywords": [
+    "devtool",
+    "extension",
+    "atomic",
+    "css"
+  ],
+  "author": "ArvinH",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ArvinH/acss_devtool/issues"
+  },
+  "homepage": "https://github.com/ArvinH/acss_devtool#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-babel-minify": "^0.4.3",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-uglify": "^3.0.0",
+    "gulp-zip": "^4.1.0"
+  }
+}

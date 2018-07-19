@@ -1,6 +1,6 @@
 {
   "name": "Atomic CSS Devtools",
-  "version": "1.2",
+  "version": "1.3",
   "description": "devtool extension for making Acss users happier",
   "devtools_page": "devtools.html",
   "permissions": [
@@ -9,12 +9,12 @@
     "https://*/*"
   ],
   "browser_action": {
-    "default_icon": "acss_devtools.png"
+    "default_icon": "./images/acss_devtools.png"
   },
   "icons": {
-    "16": "acss_devtools16x16.png",
-    "48": "acss_devtools48x48.png",
-    "128": "acss_devtools.png"
+    "16": "./images/acss_devtools16x16.png",
+    "48": "./images/acss_devtools48x48.png",
+    "128": "./images/acss_devtools.png"
   },
   "manifest_version": 2
 }
