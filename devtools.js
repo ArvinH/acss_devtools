@@ -7,6 +7,7 @@
     "acss class",
     (sidebar) => {
       sidebar.setPage("Sidebar.html");
+      let panelWindow;
 
       const page_generateAtomicClass = (selectedElementCssText = '') => {
         const inlineStyleText = selectedElementCssText;
@@ -36,10 +37,15 @@
       }
 
       const getAcssClass = (extPanelWindow) => {
+        panelWindow = extPanelWindow;
+        updateAcssClass();
+      };
+
+      const updateAcssClass = () => {
         chrome.devtools.inspectedWindow.eval(
           "window.$0.style.cssText",
           function (result, isException) {
-            var status = extPanelWindow.document.querySelector("#app");
+            var status = panelWindow.document.querySelector("#app");
             const acssClass = page_generateAtomicClass(result);
             status.innerHTML = acssClass.acss;
           }
@@ -47,5 +53,7 @@
       };
 
       sidebar.onShown.addListener(getAcssClass);
+
+      chrome.devtools.panels.elements.onSelectionChanged.addListener(updateAcssClass);
     });
 })();
