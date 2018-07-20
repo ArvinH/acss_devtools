@@ -1,7 +1,7 @@
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode: 'development',
@@ -24,25 +24,22 @@ module.exports = {
     },
     plugins: [
         new CleanWebpackPlugin(['dist']),
+        new CopyWebpackPlugin([
+            { from: 'src/images/', to: 'images/' },
+            'src/manifest.json'
+        ]),
         new HtmlWebpackPlugin({
-            title: 'ACSS devtools',
+            template: './src/sidebar.html',
             filename: 'sidebar.html',
-            template: 'src/template/sidebar.html',
             chunks: ['sidebar']
         }),
         new HtmlWebpackPlugin({
-            title: 'ACSS devtools',
             filename: 'devtools.html',
             chunks: ['devtools']
-        }),
-        new CopyWebpackPlugin([
-            { from: 'src/images/', to: 'images/' },
-            'manifest.json',
-            'README.md'
-        ])
+        })
     ],
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'js/[name].js'
+        filename: 'js/[name].bundle.js'
     }
 };
