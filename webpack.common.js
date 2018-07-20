@@ -17,7 +17,7 @@ module.exports = {
         ]
     },
     plugins: [
-        new CleanWebpackPlugin(['build']),
+        new CleanWebpackPlugin(['build', 'dest']),
         new CopyWebpackPlugin([
             { from: 'src/images/', to: 'images/' },
             {
