@@ -1,3 +1,5 @@
+import '../css/style.css';
+
 (() => {
     const copyToClipboard = str => {
         const el = document.createElement('textarea');
@@ -12,8 +14,8 @@
     };
 
     const copyButton = document.querySelector('#copy');
-    copyButton.addEventListener('click', (e) => {
+    copyButton.addEventListener('click', e => {
         const text = document.querySelector('#app').innerHTML;
-        copyToClipboard(text)
+        copyToClipboard(text);
     });
 })();
