@@ -5,7 +5,8 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 module.exports = {
     mode: 'development',
     entry: {
-        sidebar: './src/js/sidebar.js'
+        sidebar: './src/js/sidebar.js',
+        devtools: './src/js/devtools.js'
     },
     devtool: 'inline-source-map',
     devServer: {
@@ -25,7 +26,13 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'ACSS devtools',
             filename: 'sidebar.html',
-            template: 'src/template/sidebar.html'
+            template: 'src/template/sidebar.html',
+            chunks: ['sidebar']
+        }),
+        new HtmlWebpackPlugin({
+            title: 'ACSS devtools',
+            filename: 'devtools.html',
+            chunks: ['devtools']
         })
     ],
     output: {
