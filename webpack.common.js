@@ -4,15 +4,9 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    mode: 'development',
     entry: {
         sidebar: './src/js/sidebar.js',
         devtools: './src/js/devtools.js'
-    },
-    devtool: 'inline-source-map',
-    devServer: {
-        contentBase: path.resolve(__dirname, 'dist'),
-        openPage: 'sidebar.html'
     },
     module: {
         rules: [
