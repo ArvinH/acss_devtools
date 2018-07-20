@@ -26,6 +26,7 @@
   "homepage": "https://github.com/ArvinH/acss_devtool#readme",
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^4.5.2",
     "css-loader": "^1.0.0",
     "gulp": "^3.9.1",
     "gulp-babel-minify": "^0.4.3",
