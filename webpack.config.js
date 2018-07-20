@@ -26,7 +26,25 @@ module.exports = {
         new CleanWebpackPlugin(['dist']),
         new CopyWebpackPlugin([
             { from: 'src/images/', to: 'images/' },
-            'src/manifest.json'
+            {
+                from: 'src/manifest.json',
+                transform(content) {
+                    return Buffer.from(
+                        JSON.stringify(
+                            Object.assign(
+                                {
+                                    description:
+                                        process.env.npm_package_description,
+                                    version: process.env.npm_package_version
+                                },
+                                JSON.parse(content.toString())
+                            ),
+                            null,
+                            2
+                        )
+                    );
+                }
+            }
         ]),
         new HtmlWebpackPlugin({
             template: './src/sidebar.html',
