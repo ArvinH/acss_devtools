@@ -17,7 +17,7 @@ module.exports = {
         ]
     },
     plugins: [
-        new CleanWebpackPlugin(['dist']),
+        new CleanWebpackPlugin(['build']),
         new CopyWebpackPlugin([
             { from: 'src/images/', to: 'images/' },
             {
@@ -51,7 +51,7 @@ module.exports = {
         })
     ],
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'build'),
         filename: 'js/[name].bundle.js'
     }
 };
