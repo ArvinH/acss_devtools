@@ -3,13 +3,13 @@ const minifyCSS = require('gulp-minify-css');
 const minify = require('gulp-babel-minify');
 const zip = require('gulp-zip');
 
-gulp.task('minify-css', function () {
-  return gulp.src('./css/style.css')
+gulp.task('minify-css', () =>
+  gulp.src('./css/style.css')
     .pipe(minifyCSS({
       keepBreaks: true,
     }))
-    .pipe(gulp.dest('./build/css/'));
-});
+    .pipe(gulp.dest('./build/css/'))
+);
 
 gulp.task("minify", () =>
   gulp.src("./js/*.js")
@@ -25,11 +25,11 @@ gulp.task('copyFiles', () => {
   gulp.src("./*.html")
     .pipe(gulp.dest("./build/"));
   gulp.src("./manifest.json")
-    .pipe(gulp.dest("./build/"))
+    .pipe(gulp.dest("./build/"));
   gulp.src("./*.md")
-    .pipe(gulp.dest("./build/"))
+    .pipe(gulp.dest("./build/"));
   gulp.src("./images/*.png")
-    .pipe(gulp.dest("./build/images/"))
+    .pipe(gulp.dest("./build/images/"));
 });
 
 gulp.task('prepublish', () =>
