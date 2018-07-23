@@ -1,12 +1,12 @@
 # acss-devtools
 
-![Logo](./images/acss_devtools_small.png)
+![Logo](./src/images/acss_devtools_small.png)
 
 [Chrome devtool extension for Atomic css](https://chrome.google.com/webstore/detail/atomic-css-devtool/dpkcndhnanpdlppppalhnhfbokhicdmi?utm_source=gmail)
 
 Turn your element style into Atomic css class automatically, be a happy atomizer!
 
-![demo](./images/devtools-acss-demo.gif)
+![demo](./src/images/devtools-acss-demo.gif)
 
 ## Develop
 
