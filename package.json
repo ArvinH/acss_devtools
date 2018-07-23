@@ -4,8 +4,9 @@
   "description": "devtool extension for making Acss users happier",
   "main": "",
   "scripts": {
-    "build": "gulp build",
-    "pre-publish": "gulp prepublish"
+    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -24,10 +25,28 @@
   },
   "homepage": "https://github.com/ArvinH/acss_devtool#readme",
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-babel-minify": "^0.4.3",
-    "gulp-minify-css": "^1.2.4",
-    "gulp-uglify": "^3.0.0",
-    "gulp-zip": "^4.1.0"
+    "babel-core": "^6.26.3",
+    "babel-jest": "^23.4.0",
+    "babel-preset-env": "^1.7.0",
+    "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^4.5.2",
+    "css-loader": "^1.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "jest": "^23.4.1",
+    "mini-css-extract-plugin": "^0.4.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.0",
+    "style-loader": "^0.21.0",
+    "uglifyjs-webpack-plugin": "^1.2.7",
+    "webpack": "^4.16.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.4",
+    "webpack-merge": "^4.1.3",
+    "write-file-webpack-plugin": "^4.3.2",
+    "zip-webpack-plugin": "^3.0.0"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.js$": "babel-jest"
+    }
   }
 }
