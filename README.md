@@ -11,6 +11,5 @@ Turn your element style into Atomic css class automatically, be a happy atomizer
 ## Develop
 
 * Update version in `manifest.json`
-* run `gulp build`
-* then run `gulp prepublish`
+* run `npm run build`
 * Publish `acss_devtools-prod.zip` in `dest`
