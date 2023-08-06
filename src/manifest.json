@@ -1,11 +1,11 @@
 {
   "name": "Atomic CSS Devtools",
   "devtools_page": "devtools.html",
-  "permissions": [
+  "host_permissions": [
     "http://*/*",
     "https://*/*"
   ],
-  "browser_action": {
+  "action": {
     "default_icon": "./images/acss_devtools.png"
   },
   "icons": {
@@ -13,5 +13,5 @@
     "48": "./images/acss_devtools48x48.png",
     "128": "./images/acss_devtools.png"
   },
-  "manifest_version": 2
+  "manifest_version": 3
 }
